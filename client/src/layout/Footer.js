@@ -23,13 +23,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     // marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
+    position: 'static',
+    bottom: 0,
+    right: 0,
+    width: '100%'
   },
 }));
 
 export default function Footer(props) {
   const classes = useStyles();
   const { description, title } = props;
-
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
