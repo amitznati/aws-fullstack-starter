@@ -29,13 +29,11 @@ function App() {
         <ApolloProvider client={client}>
             <Router>
                 <CssBaseline />
-                <div style={{position: 'relative'}}>
-                    <Container maxWidth="lg">
-                        <Header title="Blog" sections={sections} />
-                        <Routes />
-                    </Container>
+                <Container maxWidth="lg">
+                    <Header title="Blog" sections={sections} />
+                    <Routes />
                     <Footer title="Footer" description="Something here to give the footer a purpose!" />
-                </div>
+                </Container>
             </Router>
         </ApolloProvider>
     );

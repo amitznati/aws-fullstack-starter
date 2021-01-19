@@ -9,6 +9,9 @@ import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 import Main from './Main';
 import Sidebar from './Sidebar';
+import post1 from './blog-post.1.md';
+import post2 from './blog-post.2.md';
+import post3 from './blog-post.3.md';
 
 
 const POSTS_QUERY = gql`
@@ -31,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const posts = [post1, post2, post3];
 
 const sidebar = {
   title: 'About',
@@ -67,7 +71,7 @@ export default function Blog() {
       <MainFeaturedPost post={data.posts[0]} />
       <Grid container spacing={4}>
         {[1, 2].map((index) => (
-          <FeaturedPost key={data.posts[index].id} post={data.posts[index]} />
+          <FeaturedPost key={data.posts[index].title} post={data.posts[index]} />
         ))}
       </Grid>
       <Grid container spacing={5} className={classes.mainGrid}>
