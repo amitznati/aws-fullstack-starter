@@ -1,6 +1,6 @@
 # 3. Integrate with mongoDB
 
-install local mongoDB from [here](https://www.mongodb.com/try/download/community?tck=docs_server)
+create mongoDB in from [here](https://www.mongodb.com/)
 
 ### Client
 
@@ -44,7 +44,7 @@ Connect to mongoDB and then start server
         const server = new ApolloServer({ typeDefs, resolvers });
         
         mongoose.connect(
-            'mongodb://localhost:27017/awsblog',
+            'mongodb+srv://amitznati:<password>@cluster0.smxxf.mongodb.net/<dbname>?retryWrites=true&w=majority',
             {useNewUrlParser: true, useUnifiedTopology: true})
             .then(function() {
                 console.log('mongoose connected!');
