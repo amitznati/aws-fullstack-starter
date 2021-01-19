@@ -24,6 +24,8 @@ clone code
     Resolving deltas: 100% (45/45), done.
     [ec2-user@ip-172-31-27-188 app]$
 
+run npm install on client and server and build client 
+
 2. install node [resource](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html)
 
 1.Install node version manager (nvm) by typing the following at the command line. 
