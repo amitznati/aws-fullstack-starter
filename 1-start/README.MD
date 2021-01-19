@@ -42,50 +42,40 @@ server/index.js
 
         const { ApolloServer, gql } = require('apollo-server');
 
-Define typeDefs 
+Define typeDefs
 
         const typeDefs = gql`
-            type Post { 
-                title: String!
-                body: String!
-                id: ID!
+            type Book {
+                title: String
+                author: String
             }
-            type Query {
-                posts: [Post]
-            }
-            type Mutation {
-                createPost(title: String!, body: String!): Post
+                type Query {
+                books: [Book]
             }
         `;
 
-Define resolver
+Define Resolvers
+
 
     const resolvers = {
         Query: {
-            posts: () => posts,
+            books: () => books,
         },
-        Mutation: {
-            createPost: (parent, args) => {
-                console.log(args);
-            }
-        }
     };
 
-Fake posts for start
+Fake data
 
-        const posts = [
-            {
-                title: 'The Awakening',
-                body: 'Kate Chopin',
-                id: '1111'
-            },
-            {
-                title: 'City of Glass',
-                body: 'Paul Auster',
-                id: '1112'
-            },
-        ];
 
+    const books = [
+        {
+            title: 'The Awakening',
+            author: 'Kate Chopin',
+        },
+        {
+            title: 'City of Glass',
+            author: 'Paul Auster',
+        },
+    ];
 
 Initiate and start server
 
