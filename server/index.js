@@ -8,8 +8,9 @@ const typeDefs = gql`
 
     # This "Book" type defines the queryable fields for every book in our data source.
     type Post {
-        title: String
-        body: String
+        title: String!
+        body: String!
+		id: ID!
     }
 
     # The "Query" type is special: it lists all of the available queries that
@@ -18,15 +19,20 @@ const typeDefs = gql`
     type Query {
         posts: [Post]
     }
+    type Mutation {
+        createPost(title: String!, body: String!): Post
+    }
 `;
 const posts = [
 	{
 		title: 'The Awakening',
 		body: 'Kate Chopin',
+		id: '1111'
 	},
 	{
 		title: 'City of Glass',
 		body: 'Paul Auster',
+		id: '1112'
 	},
 ];
 // Resolvers define the technique for fetching the types defined in the
@@ -35,6 +41,11 @@ const resolvers = {
 	Query: {
 		posts: () => posts,
 	},
+	Mutation: {
+		createPost: (parent, args) => {
+			console.log(args);
+		}
+	}
 };
 
 
