@@ -30,7 +30,7 @@
 
         sudo systemctl restart nginx
 
-    our NGINX default html should be expose now in http://<Public-IPv4-address> 
+    our NGINX default html should be expose now in our Public-IPv4-address 
 
 
 4. create a directory at /usr/share/<domain-name>
@@ -70,4 +70,4 @@
 
         sudo systemctl restart nginx
 
-**Our client** should be expose now in http://<Public-IPv4-address> 
+**Our client** should be expose now in our Public-IPv4-address 
