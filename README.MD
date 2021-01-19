@@ -9,7 +9,7 @@
         sudo amazon-linux-extras install nginx1
 
 
-2. allow http income request from anywhere to our server
+2. allow income http request from anywhere to our server
 
     2.1 go to EC2 instance and click on the instance id link
     
@@ -33,7 +33,7 @@
     our NGINX default html should be expose now in http://<Public-IPv4-address> 
 
 
-4. create a folder at /usr/share/<domain-name>
+4. create a directory at /usr/share/<domain-name>
    
         sudo mkdir /usr/share/aws-blog.com
         -- take ownership on this directory --
