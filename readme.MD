@@ -14,21 +14,21 @@ Server:
 
 # Steps
 ## 1. Prepare the code
+
    in this project the code was initiated using those guides:
    
-Client: https://www.apollographql.com/docs/react/get-started/
+   Client: https://www.apollographql.com/docs/react/get-started/
 
-Server: https://www.apollographql.com/docs/apollo-server/getting-started/
+   Server: https://www.apollographql.com/docs/apollo-server/getting-started/
 
-Client:
+### Client:
 
-1. Integrate server
+#### Integrate server
+   fetch posts [resource](https://www.apollographql.com/docs/react/data/queries/)
 
-    fetch posts [resource](https://www.apollographql.com/docs/react/data/queries/)
-    
-    create posts [resource](https://www.apollographql.com/docs/react/data/mutations/) 
-   
-    result index.js:
+   create posts [resource](https://www.apollographql.com/docs/react/data/mutations/) 
+
+   result index.js:
 
         import React from 'react';
         import { render } from 'react-dom';
@@ -129,3 +129,7 @@ Client:
         }
 
         render(<App />, document.getElementById('root'));
+
+
+### server
+
