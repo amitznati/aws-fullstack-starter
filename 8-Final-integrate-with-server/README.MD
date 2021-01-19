@@ -33,4 +33,4 @@
 
          sudo systemctl restart nginx
 
-# Our full stack application should be app in the air ;)
+# Our full stack application should be _app_ in the air 🚀
