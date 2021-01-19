@@ -1,5 +1,4 @@
 import React from 'react';
-import { useQuery, gql } from '@apollo/client';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -13,26 +12,39 @@ import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
 
-
-const POSTS_QUERY = gql`
-  query {
-    posts{
-      title
-      body
-      description
-      image
-      imageText
-      linkText
-      id
-    }
-  }
-`;
-
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
   },
 }));
+
+const mainFeaturedPost = {
+  title: 'Title of a longer featured blog post',
+  description:
+    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+  image: 'https://source.unsplash.com/random',
+  imgText: 'main image description',
+  linkText: 'Continue reading…',
+};
+
+const featuredPosts = [
+  {
+    title: 'Featured post',
+    date: 'Nov 12',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random',
+    imageText: 'Image Text',
+  },
+  {
+    title: 'Post title',
+    date: 'Nov 11',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random',
+    imageText: 'Image Text',
+  },
+];
 
 const posts = [post1, post2, post3];
 
@@ -62,20 +74,17 @@ const sidebar = {
 
 export default function Blog() {
   const classes = useStyles();
-  const { loading, error, data } = useQuery(POSTS_QUERY);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
   return (
     <main>
-      <MainFeaturedPost post={data.posts[0]} />
+      <MainFeaturedPost post={mainFeaturedPost} />
       <Grid container spacing={4}>
-        {[1, 2].map((index) => (
-          <FeaturedPost key={data.posts[index].title} post={data.posts[index]} />
+        {featuredPosts.map((post) => (
+          <FeaturedPost key={post.title} post={post} />
         ))}
       </Grid>
       <Grid container spacing={5} className={classes.mainGrid}>
-        <Main title="From the firehose" posts={data.posts} />
+        <Main title="From the firehose" posts={posts} />
         <Sidebar
           title={sidebar.title}
           description={sidebar.description}
