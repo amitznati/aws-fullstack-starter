@@ -1,4 +1,4 @@
-# 8. Integrate with server
+# 8. Final! Integrate with server
 
 1. install [pm2](https://pm2.keymetrics.io/) daemon process manager 
    
@@ -33,4 +33,4 @@
 
          sudo systemctl restart nginx
 
-# Our full stack application should be _app_ in the air 🚀
+# Our full stack application is now _app_ in the air 🚀

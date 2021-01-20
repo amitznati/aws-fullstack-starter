@@ -1,15 +1,15 @@
-# 8. Integrate with server
+# 8. Final! Integrate with server
 
-1. install [pm2](https://pm2.keymetrics.io/) daemon process manager 
-   
+1. install [pm2](https://pm2.keymetrics.io/) daemon process manager
+
          npm i -g pm2
 
 2. start the server <small>(run from **server** directory)</small>
 
          pm2 start index.js
-         
+
    we can check server logs:
-   
+
          pm2 logs
 
 3. configure revers proxy on NGINX
@@ -33,4 +33,4 @@
 
          sudo systemctl restart nginx
 
-# Our full stack application should be app in the air ;)
+# Our full stack application is now _app_ in the air 🚀
