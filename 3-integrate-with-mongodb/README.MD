@@ -52,3 +52,11 @@ Connect to mongoDB and then start server
                     console.log(`🚀  Server ready at ${url}`);
                 });
             });
+            
+            
+            
+## [Next 4-prepare-for-production](https://github.com/amitznati/aws-fullstack-starter/tree/master/4-prepare-for-production#4-prepare-for-production)
+
+
+
+
