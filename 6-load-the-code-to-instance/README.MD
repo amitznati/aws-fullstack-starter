@@ -24,7 +24,6 @@ clone code
     Resolving deltas: 100% (45/45), done.
     [ec2-user@ip-172-31-27-188 app]$
 
-run npm install on client and server and build client 
 
 2. install node [resource](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html)
 
@@ -48,6 +47,7 @@ This displays the following message that shows the version of Node.js that is ru
 
 Running Node.js VERSION
 
+run npm install on client and server and build client
 
 
 ## [Next 7-Expose-the-app](https://github.com/amitznati/aws-fullstack-starter/tree/master/7-Expose-the-app#7-expose-the-app)

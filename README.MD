@@ -1,6 +1,6 @@
 # Full-Stack application from scratch to production using:
 
-[React](https://reactjs.org/),     [Apollo-Client](https://www.apollographql.com/docs/react/get-started/),      [Apollo-Server](https://www.apollographql.com/docs/apollo-server/getting-started/),      [atlas-mongoDB](https://www.mongodb.com/),   [NGINX](https://www.nginx.com/),  [pm2](https://pm2.keymetrics.io/)
+[React](https://reactjs.org/),     [Apollo-Client](https://www.apollographql.com/docs/react/get-started/),      [Apollo-Server](https://www.apollographql.com/docs/apollo-server/getting-started/),      [Atlas-mongoDB](https://www.mongodb.com/),   [NGINX](https://www.nginx.com/),  [pm2](https://pm2.keymetrics.io/)
 
 and **[Amazon EC2](https://aws.amazon.com/ec2/)**
 

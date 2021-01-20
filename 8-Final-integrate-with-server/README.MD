@@ -1,10 +1,10 @@
 # 8. Final! Integrate with server
 
-1. install [pm2](https://pm2.keymetrics.io/) daemon process manager 
+#### install [pm2](https://pm2.keymetrics.io/) daemon process manager 
    
          npm i -g pm2
 
-2. start the server <small>(run from **server** directory)</small>
+####  start the server <small>(run from **server** directory)</small>
 
          pm2 start index.js
          
@@ -12,7 +12,7 @@
    
          pm2 logs
 
-3. configure revers proxy on NGINX
+#### configure revers proxy on NGINX
 
          sudo nano /etc/nginx/nginx.conf
 
@@ -29,7 +29,7 @@
          ...
          }
 
-4. restart NGINX
+#### restart NGINX
 
          sudo systemctl restart nginx
 
