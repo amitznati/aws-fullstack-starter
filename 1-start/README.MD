@@ -84,3 +84,6 @@ Initiate and start server
     server.listen().then(({ url }) => {
         console.log(`🚀  Server ready at ${url}`);
     });
+    
+    
+ ## [Next - 2-integrate-with-server](https://github.com/amitznati/aws-fullstack-starter/tree/master/2-integrate-with-server#2-integrate-with-server)
