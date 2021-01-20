@@ -32,3 +32,11 @@ i.e.
         
         https://aws.amazon.com/amazon-linux-2/
         [ec2-user@ip-172-31-4-214 ~]$
+        
+        
+
+## [Next 6-load-the-code-to-instance](https://github.com/amitznati/aws-fullstack-starter/tree/master/6-load-the-code-to-instance#6-load-the-code-to-instance)
+
+
+
+
