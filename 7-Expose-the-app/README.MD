@@ -71,3 +71,9 @@
         sudo systemctl restart nginx
 
 **Our client** should be expose now in our Public-IPv4-address 
+
+
+## [Next 8-Final-integrate-with-server](https://github.com/amitznati/aws-fullstack-starter/tree/master/8-Final-integrate-with-server#8-final-integrate-with-server)
+
+
+
