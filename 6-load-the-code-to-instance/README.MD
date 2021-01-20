@@ -47,3 +47,9 @@ run npm install on client and server and build client
 This displays the following message that shows the version of Node.js that is running.
 
 Running Node.js VERSION
+
+
+
+## [Next 7-Expose-the-app](https://github.com/amitznati/aws-fullstack-starter/tree/master/7-Expose-the-app#7-expose-the-app)
+
+
