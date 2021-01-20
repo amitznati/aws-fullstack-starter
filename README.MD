@@ -1,36 +1,26 @@
-# 8. Final! Integrate with server
+# Full-Stack application from scratch to production using:
 
-1. install [pm2](https://pm2.keymetrics.io/) daemon process manager
+[React](https://reactjs.org/),     [Apollo-Client](https://www.apollographql.com/docs/react/get-started/),      [Apollo-Server](https://www.apollographql.com/docs/apollo-server/getting-started/),      [atlas-mongoDB](https://www.mongodb.com/),   [NGINX](https://www.nginx.com/),  [pm2](https://pm2.keymetrics.io/)
 
-         npm i -g pm2
+and **[Amazon EC2](https://aws.amazon.com/ec2/)**
 
-2. start the server <small>(run from **server** directory)</small>
 
-         pm2 start index.js
+![full-stack](https://d1ih00e1ckr8rk.cloudfront.net/resources/images/uploaded-images/60088ca683216f18e2f27bc5.png)
 
-   we can check server logs:
 
-         pm2 logs
+### pre-requirement before start
 
-3. configure revers proxy on NGINX
+- Amazon account
+- terminal software with ability to connect with SSL
 
-         sudo nano /etc/nginx/nginx.conf
 
-   add this configuration to server
+## Steps
 
-         server {
-         ...
-            location /graphql/ {
-                  proxy_pass http://localhost:4000/;
-                  proxy_http_version 1.1;
-                  proxy_set_header Upgrade $http_upgrade;
-                  proxy_set_header Connection "upgrade";
-            }
-         ...
-         }
-
-4. restart NGINX
-
-         sudo systemctl restart nginx
-
-# Our full stack application is now _app_ in the air 🚀
+1. [start](https://github.com/amitznati/aws-fullstack-starter/tree/master/1-start)
+2. [integrate with server](https://github.com/amitznati/aws-fullstack-starter/tree/master/2-integrate-with-server)
+3. [integrate with mongoDB](https://github.com/amitznati/aws-fullstack-starter/tree/master/3-integrate-with-mongodb)
+4. [prepare for production](https://github.com/amitznati/aws-fullstack-starter/tree/master/4-prepare-for-production)
+5. [create aws ec2 instance](https://github.com/amitznati/aws-fullstack-starter/tree/master/5-create-aws-ec2-instance)
+6. [load the code to instance](https://github.com/amitznati/aws-fullstack-starter/tree/master/6-load-the-code-to-instance)
+7. [expose the code](https://github.com/amitznati/aws-fullstack-starter/tree/master/7-Expose-the-app)
+8. [integrate with server](https://github.com/amitznati/aws-fullstack-starter/tree/master/8-Final-integrate-with-server)
