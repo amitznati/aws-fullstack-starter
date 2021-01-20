@@ -38,3 +38,10 @@ use env variable for DB URL
                     console.log(`🚀  Server ready at ${url}`);
             });
         });
+
+
+
+
+## [Next 5-create-aws-ec2-instance](https://github.com/amitznati/aws-fullstack-starter/tree/master/5-create-aws-ec2-instance#5-create-aws-ec2-instance)
+
+
