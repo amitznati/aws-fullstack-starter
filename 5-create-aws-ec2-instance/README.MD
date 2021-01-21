@@ -12,28 +12,28 @@
 use any terminal program and run this commend from the folder where the pem file downloaded
 
 I'm using [Cmder | Console Emulator](https://cmder.net/) on window
-
-        ssh -i <pem file name>.pem ec2-user@<IPv4 address>
+````
+ssh -i <pem file name>.pem ec2-user@<IPv4 address>
+````
+        
 i.e.
+````
+ssh -i AWSKEY.pem ec2-user@3.12.151.11
 
-        ssh -i AWSKEY.pem ec2-user@3.12.151.11
+λ ssh -i AWSKEY.pem ec2-user@3.12.151.11
+The authenticity of host '3.12.151.11 (3.12.151.11)' can't be established.
+ECDSA key fingerprint is SHA256:EgLSsdff435R76O/gVrH2W+EN+u8aGJab44LOEPWPYI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '3.12.151.11' (ECDSA) to the list of known hosts.
+Last login: Mon Jan 18 18:02:16 2021 from bzq-79-181-53-227.red.bezeqint.net
 
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
 
-        λ ssh -i AWSKEY.pem ec2-user@3.12.151.11
-        The authenticity of host '3.12.151.11 (3.12.151.11)' can't be established.
-        ECDSA key fingerprint is SHA256:EgLSsdff435R76O/gVrH2W+EN+u8aGJab44LOEPWPYI.
-        Are you sure you want to continue connecting (yes/no)? yes
-        Warning: Permanently added '3.12.151.11' (ECDSA) to the list of known hosts.
-        Last login: Mon Jan 18 18:02:16 2021 from bzq-79-181-53-227.red.bezeqint.net
-        
-               __|  __|_  )
-               _|  (     /   Amazon Linux 2 AMI
-              ___|\___|___|
-        
-        https://aws.amazon.com/amazon-linux-2/
-        [ec2-user@ip-172-31-4-214 ~]$
-        
-        
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-4-214 ~]$
+````
 
 ## [Next 6-load-the-code-to-instance](https://github.com/amitznati/aws-fullstack-starter/tree/master/6-load-the-code-to-instance#6-load-the-code-to-instance)
 
