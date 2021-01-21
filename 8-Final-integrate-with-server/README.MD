@@ -7,8 +7,8 @@
 ####  start the server <small>(run from **server** directory)</small>
 
          pm2 start index.js
-         
-   we can check server logs:
+
+we can check server logs:
    
          pm2 logs
 

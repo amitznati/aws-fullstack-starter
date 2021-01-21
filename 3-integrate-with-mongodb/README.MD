@@ -7,22 +7,22 @@ create mongoDB in from [here](https://www.mongodb.com/)
 no change
 
 ### Server
-Add mongoose to dependencies 
+#### Add mongoose to dependencies 
 
         npm i mongoose
 
-server/index.js
+#### server/index.js
 
         const mongoose = require('mongoose');
 
-Define Post Model
+#### Define Post Model
 
         const PostModel = mongoose.model('Post', {
             title: String,
             body: String
         });
 
-Change the resolvers
+#### Change the resolvers
 
         const resolvers = {
             Query: {
@@ -39,7 +39,7 @@ Change the resolvers
             }
         };
 
-Connect to mongoDB and then start server
+#### Connect to mongoDB and then start server
 
         const server = new ApolloServer({ typeDefs, resolvers });
         

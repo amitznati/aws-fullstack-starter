@@ -7,11 +7,11 @@
 
 client/src/index.js
 
-Add Apollo-Client useQuery and useMutation 
+#### Add Apollo-Client useQuery and useMutation 
 
         import { gql, useQuery, useMutation } from '@apollo/client';
         
-Define posts query
+#### Define posts query
 
         const GET_POSTS = gql`
           query {
@@ -23,7 +23,7 @@ Define posts query
           }
         `;
 
-Define create post mutation
+#### Define create post mutation
 
         const CREATE_POST = gql`
           mutation createPost($title: String!, $body: String!) {
@@ -36,7 +36,7 @@ Define create post mutation
         `;
 
 
-Post list widget
+#### Post list widget
 
         function PostsList() {
         const { loading, error, data, refetch } = useQuery(GET_POSTS);
@@ -58,7 +58,7 @@ Post list widget
             );
         }
 
-Create post widget
+#### Create post widget
 
         function CreatePost() {
           const [createPost] = useMutation(CREATE_POST);
@@ -84,7 +84,7 @@ Create post widget
           );
         }
 
-App
+#### App
 
         function App() {
           return (
@@ -103,9 +103,9 @@ App
 
 ### Server
 
-results server/index.js
+server/index.js
 
-Redefine the typeDefs
+#### Redefine the typeDefs
 
         const typeDefs = gql`
             type Post {
@@ -122,7 +122,7 @@ Redefine the typeDefs
             }
         `;
 
-Redefine the resolvers
+#### Redefine the resolvers
 
         const resolvers = {
             Query: {
@@ -135,7 +135,7 @@ Redefine the resolvers
             }
         };
 
-Fake Data
+#### New fake Data
 
         const posts = [
             {

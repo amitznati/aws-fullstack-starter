@@ -4,7 +4,7 @@
 
 change the server URL based on env mode
 
-client/src/index.js
+#### client/src/index.js
 
         const isDev = process.env.NODE_ENV === 'development';
         const client = new ApolloClient({
@@ -16,18 +16,19 @@ client/src/index.js
 
 change the db connection string based on env mode
 
-install dotenv so we can use custom env variables
+#### install dotenv so we can use custom env variables
 
         npm i dotenv
-add .env file to server folder and set variable
+#### add .env file to server folder and set variable
 
         DB_URL=mongodb+srv://<user>:<password>@cluster0.smxxf.mongodb.net/<dbname>
-consume env variables
+
+#### consume env variables
 
         const dotenv = require('dotenv');
         dotenv.config();
 
-use env variable for DB URL
+#### use env variable for DB URL
 
         mongoose.connect(
             process.env.DB_URL,// using env variable

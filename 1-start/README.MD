@@ -14,14 +14,14 @@ client/src/index.js
     import { render } from 'react-dom';
     import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-initiate Apollo-Client
+#### initiate Apollo-Client
 
     const client = new ApolloClient({
       uri: 'http://localhost:4000/graphql', // server host
       cache: new InMemoryCache()
     });
     
-App with ApolloProvider
+#### App with ApolloProvider
 
     function App() {
       return (
@@ -42,7 +42,7 @@ server/index.js
 
         const { ApolloServer, gql } = require('apollo-server');
 
-Define typeDefs
+#### Define typeDefs
 
         const typeDefs = gql`
             type Book {
@@ -54,7 +54,7 @@ Define typeDefs
             }
         `;
 
-Define Resolvers
+#### Define Resolvers
 
 
     const resolvers = {
@@ -63,7 +63,7 @@ Define Resolvers
         },
     };
 
-Fake data
+#### Fake data
 
 
     const books = [
@@ -77,7 +77,7 @@ Fake data
         },
     ];
 
-Initiate and start server
+#### Initiate and start server
 
     const server = new ApolloServer({ typeDefs, resolvers });
     

@@ -4,33 +4,34 @@
 
         sudo yum install nginx
 
-    You will get a warning command to install AWS curated Nginx package - great, that's what we need!
+
+You will get a warning command to install AWS curated Nginx package - great, that's what we need!
 
         sudo amazon-linux-extras install nginx1
 
 
 #### allow income http request from anywhere to our server
 
-      1. go to EC2 instance and click on the instance id link
-    
-      2. in the down section select **Security** tab
+  1. go to EC2 instance and click on the instance id link
 
-      3. click on the **Security groups** link
+  2. in the down section select **Security** tab
 
-      4. click on **Edit inbound rules** in the **inbound rules** tab
+  3. click on the **Security groups** link
 
-      5. click on **Add rule**
+  4. click on **Edit inbound rules** in the **inbound rules** tab
 
-      6. select type **HTTP** and **anywhere** for the source
+  5. click on **Add rule**
 
-      7. **Save changes**
+  6. select type **HTTP** and **anywhere** for the source
+
+  7. **Save changes**
 
 
 #### restart nginx
    
            sudo systemctl restart nginx
    
-       our NGINX default html should be expose now in our Public-IPv4-address 
+our NGINX default html should be expose now in our Public-IPv4-address 
    
    
 #### create a directory at /usr/share/<domain-name>
@@ -46,7 +47,7 @@
    
 #### change nginx configuration
    
-       original configuration
+original configuration
            
            ...
            server {
@@ -56,7 +57,7 @@
            }
            ...
    
-       change to
+change to
    
            ...
            server {
