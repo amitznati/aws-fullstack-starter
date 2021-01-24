@@ -1,4 +1,4 @@
-# Full-Stack application from scratch to production | Part 1
+# Full-Stack application from scratch to production tutorial | Part 1
 
 
 In those days there a more companies that offering free full-stack architecture, ready to use within few clicks
@@ -24,7 +24,7 @@ Initiate basic blog application, React application that integrate with nodeJS se
 We'll load this application to Amazon EC2 instance and expose the application to the world.
 
 ### Part 2
-Create upload files mechanize using Amazon S3 + Amazon CloudFront with fast DNS distribution, adding authentication using Amazon Cognito Identity to authenticate users.
+Create upload files mechanize using Amazon S3 + Amazon CloudFront for fast DNS distribution, adding authentication using Amazon Cognito Identity to authenticate users.
 
 ### Part 3
 Styling and refactor the application, make it full functional blog application
