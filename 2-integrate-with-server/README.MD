@@ -1,17 +1,20 @@
 # 2. Integrate with server
-   fetch posts [resource](https://www.apollographql.com/docs/react/data/queries/)
 
-   create posts [resource](https://www.apollographql.com/docs/react/data/mutations/) 
+In the previous step we setup the Apollo-Client and the Apollo-Server with example data model (Book), now we'll change the data model for Post model with title and body properties, enhance the code to fetch all the posts and create new post
+
+fetch posts [resource](https://www.apollographql.com/docs/react/data/queries/)
+
+create posts [resource](https://www.apollographql.com/docs/react/data/mutations/) 
 
 ## Client
 
 client/src/index.js
 
-#### Add Apollo-Client useQuery and useMutation 
+Add Apollo-Client useQuery and useMutation 
 ````javascript
 import { gql, useQuery, useMutation } from '@apollo/client';
 ````
-#### Define posts query
+Define posts query
 ````javascript
 const GET_POSTS = gql`
   query {
@@ -23,7 +26,7 @@ const GET_POSTS = gql`
   }
 `;
 ````
-#### Define create post mutation
+Define create post mutation
 ````javascript
 const CREATE_POST = gql`
   mutation createPost($title: String!, $body: String!) {
@@ -35,7 +38,7 @@ const CREATE_POST = gql`
   }
 `;
 ````
-#### Post list widget
+Post list widget
 ````javascript
 function PostsList() {
     const { loading, error, data, refetch } = useQuery(GET_POSTS);
@@ -57,7 +60,7 @@ function PostsList() {
     );
 }
 ````
-#### Create post widget
+Create post widget
 ````javascript
 function CreatePost() {
     const [createPost] = useMutation(CREATE_POST);
@@ -103,7 +106,7 @@ render(<App />, document.getElementById('root'));
 
 server/index.js
 
-#### Redefine the typeDefs
+Redefine the typeDefs
 ````javascript
 const typeDefs = gql`
     type Post {
@@ -120,7 +123,7 @@ const typeDefs = gql`
     }
 `;
 ````
-#### Redefine the resolvers
+Redefine the resolvers
 ````javascript
 const resolvers = {
     Query: {
@@ -133,7 +136,7 @@ const resolvers = {
     }
 };
 ````
-#### New fake Data
+New fake Data
 ````javascript
 const posts = [
     {
@@ -148,7 +151,6 @@ const posts = [
     },
 ];
 ````
-
 
 ## [Next 3-integrate-with-mongodb](https://github.com/amitznati/aws-fullstack-starter/tree/master/3-integrate-with-mongodb#3-integrate-with-mongodb)
 

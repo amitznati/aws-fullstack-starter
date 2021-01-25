@@ -12,19 +12,19 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-  books: () => books,
+    books: () => books,
   },
 };
 
 
 const books = [
   {
-  title: 'The Awakening',
-  author: 'Kate Chopin',
+    title: 'The Awakening',
+    author: 'Kate Chopin',
   },
   {
-  title: 'City of Glass',
-  author: 'Paul Auster',
+    title: 'City of Glass',
+    author: 'Paul Auster',
   },
 ];
 

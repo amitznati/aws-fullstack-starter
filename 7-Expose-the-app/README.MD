@@ -1,14 +1,14 @@
 # 7. Expose the app
 
 #### install [NGINX](https://www.nginx.com/) load balance [resource](https://regbrain.com/article/node-nginx-ec2)
-
-        sudo yum install nginx
-
+````
+sudo yum install nginx
+````
 
 You will get a warning command to install AWS curated Nginx package - great, that's what we need!
-
-        sudo amazon-linux-extras install nginx1
-
+````
+sudo amazon-linux-extras install nginx1
+````
 
 #### allow income http request from anywhere to our server
 
@@ -27,51 +27,50 @@ You will get a warning command to install AWS curated Nginx package - great, tha
   7. **Save changes**
 
 
-#### restart nginx
-   
-           sudo systemctl restart nginx
-   
-our NGINX default html should be expose now in our Public-IPv4-address 
-   
-   
-#### create a directory at /usr/share/<domain-name>
-      
-           sudo mkdir /usr/share/aws-blog.com
-           -- take ownership on this directory --
-           sudo chown -R $USER:$USER /usr/share/aws-blog.com
+restart nginx
+````
+sudo systemctl restart nginx
+````
+#### Our NGINX default html should be expose now in our Public-IPv4-address 
    
    
-#### copy client build
-   
-           cp -r build/* /usr/share/aws-blog.com/
-   
-#### change nginx configuration
+Create a directory at /usr/share/<domain-name>
+````
+sudo mkdir /usr/share/aws-blog.com
+-- take ownership on this directory --
+sudo chown -R $USER:$USER /usr/share/aws-blog.com
+````
+Copy client build
+````
+cp -r build/* /usr/share/aws-blog.com/
+````
+Change nginx configuration
    
 original configuration
-           
-           ...
-           server {
-              ...
-              root         /usr/share/nginx/html;
-              ...
-           }
-           ...
-   
+````
+...
+server {
+    ...
+    root         /usr/share/nginx/html;
+    ...
+}
+...
+````
 change to
-   
-           ...
-           server {
-              ...
-              root         /usr/share/aws-blog.com;
-              ...
-           }
-           ...
-   
-#### restart NGINX
-   
-           sudo systemctl restart nginx
-
-**Our client** should be expose now in our Public-IPv4-address 
+````
+...
+server {
+    ...
+    root         /usr/share/aws-blog.com;
+    ...
+}
+...
+````
+Restart NGINX
+````
+sudo systemctl restart nginx
+````
+#### **Our client** should be expose now in our Public-IPv4-address 
 
 
 ## [Next 8-Final-integrate-with-server](https://github.com/amitznati/aws-fullstack-starter/tree/master/8-Final-integrate-with-server#8-final-integrate-with-server)

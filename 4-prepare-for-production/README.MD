@@ -2,7 +2,10 @@
 
 ### Client
 
-change the server URL based on env mode
+Change the server URL based on env mode
+
+We'll use _/graphql/_ endpoint for the server in production because our client and server will be on same host,
+we'll just redirect any requests with _/graphql/_ to our server that live on other port by revers proxy in NGINX configuration (Step 8)
 
 #### client/src/index.js
 ````javascript
@@ -14,22 +17,22 @@ const client = new ApolloClient({
 ````
 ### Server
 
-change the db connection string based on env mode
+Change the db connection string based on env mode
 
-#### install dotenv so we can use custom env variables
+Install dotenv so we can use custom env variables
 ````
 npm i dotenv
 ````
-#### add .env file to server folder and set variable
+Add .env file to server folder and set variable
 ````dotenv
 DB_URL=mongodb+srv://<user>:<password>@cluster0.smxxf.mongodb.net/<dbname>
 ````
-#### consume env variables
+Consume env variables
 ````javascript
 const dotenv = require('dotenv');
 dotenv.config();
 ````
-#### use env variable for DB URL
+Use env variable for DB URL
 ````javascript
 mongoose.connect(
     process.env.DB_URL,// using env variable

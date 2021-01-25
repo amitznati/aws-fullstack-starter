@@ -1,6 +1,6 @@
 # 1. Initiate the code
 
-   in this project the code was initiated using those guides:
+In this project the code was initiated using those guides to build basic client-server integration using [Apollo](https://apollographql.com/) for GraphQL API
    
    Client: https://www.apollographql.com/docs/react/get-started/
 
@@ -16,7 +16,7 @@ import { render } from 'react-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 ````
 
-#### initiate Apollo-Client
+Initiate Apollo-Client
 ````javascript
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql', // server host
@@ -24,7 +24,7 @@ const client = new ApolloClient({
 });
 ````
 
-#### App with ApolloProvider
+App with ApolloProvider
 ````javascript
 function App() {
   return (
@@ -41,11 +41,12 @@ render(<App />, document.getElementById('root'));
 
 ### Server
 
+This is introduction to integration! we'll change the data schema in the next step, we just want to run Apollo server and for that we need to define basic typeDefs and resolvers:
 server/index.js
 ````javascript
 const { ApolloServer, gql } = require('apollo-server');
 ````
-#### Define typeDefs
+Define typeDefs
 ````javascript
 const typeDefs = gql`
     type Book {
@@ -57,7 +58,7 @@ const typeDefs = gql`
     }
 `;
 ````
-#### Define Resolvers
+Define Resolvers
 ````javascript
 const resolvers = {
     Query: {
@@ -65,7 +66,7 @@ const resolvers = {
     },
 };
 ````
-#### Fake data
+Fake data
 ````javascript
 const books = [
     {
@@ -78,7 +79,7 @@ const books = [
     },
 ];
 ````
-#### Initiate and start server
+Initiate and start server
 ````javascript
 const server = new ApolloServer({ typeDefs, resolvers });
 

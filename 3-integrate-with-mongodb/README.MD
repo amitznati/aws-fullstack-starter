@@ -1,28 +1,27 @@
 # 3. Integrate with mongoDB
 
-create mongoDB in from [here](https://www.mongodb.com/)
+In this tutorial we're using mongoDB for a database, you can use any SQL/NOSQL database, 
 
-### Client
-
-no change
+Create a new database using Atlas-mongoDB  [here](https://www.mongodb.com/) or use existing database
 
 ### Server
-#### Add mongoose to dependencies 
-
-        npm i mongoose
-
-#### server/index.js
+#### Add [mongoose](https://mongoosejs.com/) to dependencies
+Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
+```
+npm i mongoose
+```
+server/index.js
 ````javascript
 const mongoose = require('mongoose');
 ````
-#### Define Post Model
+Define Post Model
 ````javascript
 const PostModel = mongoose.model('Post', {
     title: String,
     body: String
 });
 ````
-#### Change the resolvers
+Change the resolvers
 ````javascript
 const resolvers = {
     Query: {
@@ -39,7 +38,7 @@ const resolvers = {
     }
 };
 ````
-#### Connect to mongoDB and then start server
+Connect to mongoDB and then start server
 ````javascript
 const server = new ApolloServer({ typeDefs, resolvers });
 
