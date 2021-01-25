@@ -1,7 +1,7 @@
 # Full-Stack application from scratch to production tutorial | Part 1
 
 
-In those days there a more companies that offering free full-stack architecture, ready to use within few clicks
+Nowadays there a more companies that offering free full-stack architecture, ready to use within few clicks
 
 those architectures often offer: Authentication,Storage, REST/GraphQL API, DB, Client hosting, cloud functions, notification manager and more
 
