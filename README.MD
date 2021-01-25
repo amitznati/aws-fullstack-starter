@@ -17,6 +17,13 @@ this process is usually complex and you find yourself working herder to customiz
 
 In this tutorial we're going to build this infrastructure manually from scratch and **FREE***. <small>(within the free tier policy of AWS)</small>
 
+- GraphQL API - React + Apollo + NodeJS + mongoDB
+- Client/Server hosting - AWS EC2 + NGINX + pm2
+- Storage - Amazon S3 + Amazon CloudFront
+- Authentication - AWS Cognito Identity + AWS Amplify
+- Push Notification - AWS Amplify
+
+
 This tutorial is the first part out of 4:
 
 ### Part 1
